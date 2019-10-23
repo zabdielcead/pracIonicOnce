@@ -20,15 +20,17 @@ export class Tab1Page implements OnInit {
   loadMap() {
     this.options = {
       layers: [
-        tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
+        tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-eco/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
       ],
-      zoom: 5,
+      zoom: 2,
       center: latLng(46.879966, -121.726909)
     };
     this.layersControl = {
       baseLayers: {
-        'Open Street Map': tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' }),
-        'Open Cycle Map': tileLayer('http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
+        'Open Street Map': tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-eco/{z}/{x}/{y}.png',
+         { maxZoom: 18, attribution: '...' }),
+        'Open Cycle Map': tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-eco/{z}/{x}/{y}.png',
+        { maxZoom: 18, attribution: '...' })
       },
       overlays: {
         'Big Circle': circle([ 46.95, -122 ], { radius: 5000 }),
