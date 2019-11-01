@@ -1,21 +1,29 @@
-import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab3Page } from './tab3.page';
+import { Routes, RouterModule } from '@angular/router';
+
+import { IonicModule } from '@ionic/angular';
+
+import { Tab4Page } from './tab4.page';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { LeafletD3Module } from '@asymmetrik/ngx-leaflet-d3';
+const routes: Routes = [
+  {
+    path: '',
+    component: Tab4Page
+  }
+];
 
 @NgModule({
   imports: [
-    IonicModule,
     CommonModule,
     FormsModule,
+    IonicModule,
     LeafletModule,
     LeafletD3Module,
-    RouterModule.forChild([{ path: '', component: Tab3Page }])
+    RouterModule.forChild(routes)
   ],
-  declarations: [Tab3Page]
+  declarations: [Tab4Page]
 })
-export class Tab3PageModule {}
+export class Tab4PageModule {}

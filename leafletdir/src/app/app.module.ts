@@ -9,6 +9,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { LeafletD3Module } from '@asymmetrik/ngx-leaflet-d3';
+import { LeafletMarkerClusterModule } from '@asymmetrik/ngx-leaflet-markercluster';
+
 
 
 @NgModule({
@@ -18,7 +21,9 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    LeafletModule.forRoot()
+    LeafletModule.forRoot(),
+    LeafletD3Module.forRoot(),
+    LeafletMarkerClusterModule.forRoot()
   ],
   providers: [
     StatusBar,
